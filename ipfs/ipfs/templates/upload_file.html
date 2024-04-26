@@ -10,6 +10,7 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="file" required>
+        <input type="text" name="nombre" required>
         <button type="submit">Upload</button>
     </form>
 </body>
