@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from ipfs.views import pagina_principal, upload_file
+from ipfs.views import pagina_principal, upload_file,lista_archivos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', pagina_principal, name="Pagina principal" ),
-    path('upload', upload_file, name="Subir archivo")
+    path('upload', upload_file, name="Subir archivo"),
+    path('listado',lista_archivos, name="listado_archivos")
 ]

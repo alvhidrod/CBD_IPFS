@@ -7,14 +7,23 @@ def pagina_principal(request):
     return render(request, 'home.html')
 
 
+def lista_archivos(request):
+    archivos = File.objects.all()
+    return render(request,'listado.html', {
+        'archivos': archivos
+    } )
+
 def upload_file(request):
     if request.method == 'POST' and request.FILES['file']:
         file = request.FILES['file']
         client = connect()
         res = client.add(file)
         client.close()
-        nombre = request.nombre
-        File.objects.create(creador = nombre, clave = res["Hash"])
+        nombre = request.POST.get('nombre')
+        print(nombre)
+        key= res["Hash"]
+        archivo= res["Name"]
+        File.objects.create(creador = nombre, clave = key,nombre_archivo= archivo)
         return HttpResponse(f'Archivo subido a IPFS. CID: {res["Hash"]}')
     
     return render(request, 'upload_file.html')
