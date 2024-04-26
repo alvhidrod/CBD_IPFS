@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from ipfshttpclient import connect
 
+def pagina_principal(request):
+    return render(request, 'home.html')
+
+
 def upload_file(request):
     if request.method == 'POST' and request.FILES['file']:
         file = request.FILES['file']

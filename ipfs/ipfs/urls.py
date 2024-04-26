@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ipfs.views import pagina_principal, upload_file
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('/',  )
+    path('', pagina_principal, name="Pagina principal" ),
+    path('upload', upload_file, name="Subir archivo")
 ]
