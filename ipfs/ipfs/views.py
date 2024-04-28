@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from ipfshttpclient import connect
 from .models import File
 
@@ -24,6 +23,6 @@ def upload_file(request):
         key= res["Hash"]
         archivo= res["Name"]
         File.objects.create(creador = nombre, clave = key,nombre_archivo= archivo)
-        return HttpResponse(f'Archivo subido a IPFS. CID: {res["Hash"]}')
+        return render(request,'confirmacion.html',{'key':key})
     
     return render(request, 'upload_file.html')
