@@ -1,18 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload File to IPFS</title>
+    <title>Sube tu archivo a IPFS</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Upload File to IPFS</h1>
-    <form method="post" enctype="multipart/form-data">
+    <h1>Sube tu archivo a IPFS</h1>
+    <form method="post" enctype="multipart/form-data" class="column-form">
         {% csrf_token %}
-        <input type="file" name="file" required>
-        <input type="text" name="nombre" required>
-        <button type="submit">Upload</button>
+        <div>
+            <label for="file">Introduzca su archivo:</label>
+            <input type="file" id="file" name="file" required>
+        </div>
+        <div>
+            <label for="nombre">Introduzca su nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <button type="submit">Subir</button>
     </form>
+    
 
     
     <button onclick="window.location.href = 'home';">Volver al menú principal</button>

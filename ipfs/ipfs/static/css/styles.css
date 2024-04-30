@@ -1,0 +1,53 @@
+body {
+    text-align: center; 
+}
+
+h1, p {
+    margin-top: 50px; 
+}
+
+button {
+    margin-top: 20px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    color: black; 
+    border: 2px solid black; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 15px; 
+    padding: 10px 20px; 
+}
+
+.column-form input[type="text"],
+.column-form input[type="file"] {
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.column-form label {
+    display: block;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.border{
+    display: block;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.table-container{
+    margin: 0 auto;
+    border-spacing: 15px;
+    
+}
+
+
+
+
+
+
+

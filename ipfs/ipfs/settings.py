@@ -54,10 +54,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ipfs.urls'
 
+STATIC_URL = '/static/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'ipfs/templates')],
+        'DIRS': [BASE_DIR / 'ipfs' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

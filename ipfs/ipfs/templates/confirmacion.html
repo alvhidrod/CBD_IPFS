@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <h1>¡Tu archivo se ha subido!</h1>
     <p>El código para ver tu archivo subido es:</p>
-    <p> {{key}}</p>
+    <p class="border"> {{key}}</p>
     <button onclick="window.location.href = 'home';">Volver al menú principal</button>
     
 

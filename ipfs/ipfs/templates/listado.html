@@ -1,13 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <h1>Listado de tus archivos subidos</h1>
-    <table border=1>
+    <table class="table-container">
     {% for archivo in archivos %}
         <tr>
             <td>{{ archivo.creador }}</td>

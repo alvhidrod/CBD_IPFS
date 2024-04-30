@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
-<body>
+<body class="background-color"> 
     <h1>Bienvenido a la Página Principal</h1>
     <p>¡Gracias por visitar nuestra página!</p>
-    <button onclick="window.location.href = 'upload';">Ir a Subir Archivo</button>
+    <button onclick="window.location.href = 'upload';">Subir Archivo</button>
     <button onclick="window.location.href = 'listado';">Ver los archivos subidos</button>
 </body>
 </html>
